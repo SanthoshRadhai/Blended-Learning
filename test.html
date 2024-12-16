@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Clone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .course-card {
+            transition: transform 0.2s;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .problem-row:hover {
+            background-color: #2d2d2d;
+        }
+        
+        .company-tag {
+            background-color: #2d2d2d;
+            transition: background-color 0.2s;
+        }
+        
+        .company-tag:hover {
+            background-color: #3d3d3d;
+        }
+
+        .logo-text {
+            color: #FFA500; /* Orange color */
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <!-- Logo with "Blended Learning" -->
+                <a href="#" class="logo-text">Blended Learning</a>
+                <a href="#" class="text-gray-300 hover:text-white">Explore</a>
+                <a href="#" class="text-white font-medium">Problems</a>
+                <a href="#" class="text-gray-300 hover:text-white">Contest</a>
+                <a href="#" class="text-gray-300 hover:text-white">Discuss</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Display user register number instead of 'Sign in' -->
+                <button class="text-gray-300 hover:text-white">#123456789</button> <!-- User register number -->
+                <!-- Replace Premium button with Logout -->
+                <button class="bg-red-600 text-white px-4 py-2 rounded">Logout</button> <!-- Logout button -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Course Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="course-card bg-green-600 rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-2">LeetCode's Interview Crash Course:</h3>
+                <p class="text-sm mb-4">System Design for Interviews and Beyond</p>
+                <button class="bg-white text-green-600 px-4 py-2 rounded">Start Learning</button>
+            </div>
+            <div class="course-card bg-purple-600 rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-2">LeetCode's Interview Crash Course:</h3>
+                <p class="text-sm mb-4">Data Structures and Algorithms</p>
+                <button class="bg-white text-purple-600 px-4 py-2 rounded">Start Learning</button>
+            </div>
+            <div class="course-card bg-blue-600 rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-2">Top Interview Questions</h3>
+                <p class="text-sm mb-4">Essential Questions for Job Interviews</p>
+                <button class="bg-white text-blue-600 px-4 py-2 rounded">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Topics and Problem List -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-3/4">
+                <!-- Topics -->
+                <div class="flex space-x-4 mb-6">
+                    <button class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Array (1768)</button>
+                    <button class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">String (741)</button>
+                    <button class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Hash Table (644)</button>
+                    <button class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Math (533)</button>
+                </div>
+
+                <!-- Problem List -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-800">
+                            <tr>
+                                <th class="px-6 py-3 text-left">Status</th>
+                                <th class="px-6 py-3 text-left">Title</th>
+                                <th class="px-6 py-3 text-left">Author</th> <!-- Changed 'Solution' to 'Author' -->
+                                <th class="px-6 py-3 text-left">Difficulty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="problem-row border-b border-gray-800">
+                                <td class="px-6 py-4">
+                                    <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                </td>
+                                <td class="px-6 py-4">Maximum XOR for Each Query</td>
+                                <td class="px-6 py-4">Author Name</td> <!-- Added 'Author' column -->
+                                <td class="px-6 py-4">Medium</td>
+                            </tr>
+                            <tr class="problem-row border-b border-gray-800">
+                                <td class="px-6 py-4">
+                                    <div class="w-4 h-4 bg-gray-500 rounded-full"></div>
+                                </td>
+                                <td class="px-6 py-4">Two Sum</td>
+                                <td class="px-6 py-4">Author Name</td> <!-- Added 'Author' column -->
+                                <td class="px-6 py-4">Easy</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/4">
+                <!-- Calendar -->
+                <div class="bg-gray-900 rounded-lg p-4 mb-6">
+                    <h3 class="text-lg font-bold mb-4">November 2024</h3>
+                    <div class="grid grid-cols-7 gap-2 text-center">
+                        <div class="text-gray-500">S</div>
+                        <div class="text-gray-500">M</div>
+                        <div class="text-gray-500">T</div>
+                        <div class="text-gray-500">W</div>
+                        <div class="text-gray-500">T</div>
+                        <div class="text-gray-500">F</div>
+                        <div class="text-gray-500">S</div>
+                    </div>
+                </div>
+
+                <!-- Trending Companies -->
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <h3 class="text-lg font-bold mb-4">Trending Companies</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="company-tag rounded-lg p-2 text-sm">
+                            <span>Meta</span>
+                            <span class="text-gray-400">999</span>
+                        </div>
+                        <div class="company-tag rounded-lg p-2 text-sm">
+                            <span>Google</span>
+                            <span class="text-gray-400">1762</span>
+                        </div>
+                        <div class="company-tag rounded-lg p-2 text-sm">
+                            <span>Amazon</span>
+                            <span class="text-gray-400">1711</span>
+                        </div>
+                        <div class="company-tag rounded-lg p-2 text-sm">
+                            <span>Microsoft</span>
+                            <span class="text-gray-400">969</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
